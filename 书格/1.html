@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>书格</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.diyi{width: 100%;height: 515.35px;background: #F8F8F8;}
+			.diyi1{width: 439.6px;height: 415.35px;padding: 50px;float: left;}
+			.diyi2{width: 439.6px;height: 237.1px;margin-top: 88px;}
+			.diyi3{width: 439.6px;height: 54px;}
+			.diyi4{width: 439.6px;height: 63.6px;margin-top: 50px;}
+			.diyi5{width: 439.6px;height: 49px;margin-top: 20px;}
+			.diyi6{width: 107px;height: 41px;line-height: 41px;text-align: center;background: #00B07B;color: #FEFEFE;font-size: 15px;float: left;margin-top: 3px;margin-left: 100px;margin-right: 10px;}
+			.diyi6:hover{background: #19B787;}
+			.diyi7{width: 107px;height: 41px;line-height: 41px;text-align: center;background:#DADADA;color: #555555;font-size: 15px;float: left;margin-top: 3px;}
+			.dier{width: 405.683px;height: 207.883px;float: left;border-bottom: 2px #FFFFFF solid;position: relative;z-index: 1;overflow: hidden;}
+			.dier img{transition: .7s;}
+			.dier:hover img{transform:scale(1.06);}
+			.dier1{width: 402.683px;height: 207.883px;float: left;border-bottom: 2px #FFFFFF solid;position: relative;z-index: 1;overflow: hidden;cursor: pointer;}
+			.dier1 img{transition: .7s;}
+			.dier1:hover img{transform:scale(1.07);}
+			.dier2{width: 404.683px;height: 207.883px;float: left;margin-right: 2px;position: relative;z-index: 2;top: -212px;line-height: 207px;text-align: center;color: #FFFFFF;background: RGBa(0,0,0, .4);cursor: pointer;}
+			.dier3{width: 402.683px;height: 207.883px;float: left;position: relative;z-index: 2;top: -212px;line-height: 207px;text-align: center;color: #FFFFFF;background: RGBa(0,0,0, .4);}
+			.dier4{width: 807.683px;height: 307.883px;float: left;position: relative;cursor: pointer;overflow: hidden;}
+			.dier5{width: 163px;height: 160px;position: absolute;top: 0;font-size: 17px;color: #fff;padding: 20.3px;background: RGBa(0,0,0, .5);padding-top: 126px;font-weight: 600;}
+			.dier6{ transition:.7s; width: 807.683px;height: 307.883px;float: left;position: relative;cursor: pointer;z-index: 1;}
+			.dier7{ transition:.7s; width: 807.683px;height: 307.883px;float: left;position: relative;cursor: pointer;left: 202px;top: -308px;z-index: 2;}
+			.dier8{ transition:.7s; width: 807.683px;height: 307.883px;float: left;position:relative;cursor: pointer;left: 404px;top: -616px;z-index: 3;}
+			.dier9{ transition:.7s; width: 807.683px;height: 307.883px;float: left;position:relative;cursor: pointer;left: 606px;top: -924px;z-index: 4;}
+			.disan{width: 100%;height: 211.383px;background: #F2F2F2;}
+			.disan1{width: 538.6px;padding-top: 10px;float: left;}
+			.disan2{width: 538.6px;height: 175.8px;}
+			.disan3{width: 538.6px;height: 65.5px}
+			.disan4{width: 538.6px;height: 34.1px;text-align: center;font-size: 20pt;margin: 13.6px 0;}
+			.disan5{width: 538.6px;height: 49px}
+			.disan6{width: 106.4px;height: 41px;line-height: 41px;text-align: center;background:#E60013;color: #FFFFFF;font-size: 15px;float: left;margin-top: 3px;margin-left: 125px;margin-right: 10px;}
+			.disan6:hover{background: #E71829;}
+			.disan7{width: 177.5px;height: 41px;line-height: 41px;text-align: center;background:#DADADA;color: #555555;font-size: 15px;float: left;margin-top: 3px;}
+			.disan8{width: 808.633px;height: 209.383px;float: left;}
+			.ding1{width: 201.333px;height: 102.683px;float: left;position: relative;overflow: hidden;cursor: pointer;margin-right: 1px;margin-bottom: 1px;}
+			.ding1 img{transition: 1s;}
+			.ding1:hover img{transform: scale(1.1);}
+			.ding1:hover .ding2{background: RGBa(217,217,217,.5);}
+			.ding2{width: 205.333px;height: 102.683px;position: absolute;text-align: center;line-height: 106px;background: RGBa(0,0,0,.3);top: 0px;color: #FFFFFF;}
+			.ding3{width: 199.333px;height: 102.683px;float: left;position: relative;overflow: hidden;cursor: pointer;margin-bottom: 1px;}
+			.ding3 img{transition: 1s;}
+			.ding3:hover img{transform: scale(1.1);}
+			.ding3:hover .ding2{background: RGBa(217,217,217,.5);}
+			.lianjie{width: 1349px;height: 672.333px;padding: 15px 0 30px 0;background: #f2f2f2 url(//new.shuge.org/wp-content/themes/artview/images/background-images/he-wu.png) center center repeat scroll;}
+			.lianjie1{width: 1249px;height: 672.333px;padding: 0px 50px;}
+			.lianjie2{width: 256.033px;height: 563.533px;float: left;}
+			.lianjie3{width: 256.033px;height: 138.167px;margin: 20px 0;}
+			.hing1{margin: 0px 0 8px 0;color: #616161;font-weight: 400;padding-top: 17.68px;}
+			.lianjie4{width: 256.033px;height: 89.6px;}
+			.lianjie4 p{color: #616161;font-size: 14px;height: 22.4px;cursor: pointer;}
+			.lianjie4 p:hover{color: #A3A3A3;}
+			.lianjie6{width: 256.033px;height: 46.8px;padding: 3px 0;cursor: pointer;}
+			.lianjie7{width: 211.033px;height: 44.8px;float: left;color: #616161;font-size: 14px;margin-top: 2px;}
+			.lianjie7 p{font-size: 12px;height: 22.4px;line-height: 22.4px;}
+			.ning{width: 256.033px;height: 557.4px;float: left;margin-left: 74.9333px;}
+			.ning1{width: 256.033px;height: 517.4px;margin: 20px 0;}
+			.ning2{width: 256.033px;height: 42.6px;}
+			.ning3{width: 49.7667px;height: 41.6px;float: left;text-align: center;line-height: 41px;color: #5E5E5E;border-bottom: 2px #5E5E5E solid;cursor: pointer;}
+			.ning4{width: 49.7667px;height: 41.6px;float: left;text-align: center;line-height: 41px;color: #777777;cursor: pointer;}
+			.ning5{width: 79.7667px;height: 41.6px;float: left;text-align: center;line-height: 41px;color: #777777;cursor: pointer;}
+			.ning6{width: 256.033px;height: 46.8px;padding: 3px 0;color: #616161;font-size: 14px;cursor: pointer;}
+			.ning6 p{font-size: 12px;height: 22.4px;line-height: 22.4px;cursor: pointer;}
+			.ning7{width: 256.033px;height: 69.2px;padding: 3px 0;color: #616161;font-size: 14px;cursor: pointer;}
+			.ting{width: 256.033px;height: 672.333px;float: left;margin-left: 74.9333px;}
+			.ting1{width: 256.033px;height: 429.367px;margin: 20px 0;}
+			.ting2{width: 256.033px;height: 182.967px;margin: 20px 0;}
+			.king{width: 256.033px;height: 566.733px;float: left;margin-left: 74.9333px;}
+			.king1{width: 256.033px;height: 182.967px;margin: 20px 0;}
+			.ting11 p{color: #616161;font-size: 14px;height: 22.4px;cursor: pointer;}
+			.ting11 p:hover{color: #A3A3A3;}
+			.king2{width: 256.0333px;height: 134.4px;color: #616161;font-size: 14px;}
+			.king2 span{color: #616161;font-size: 14px;height: 22.4px;cursor: pointer;}
+			.king2 span:hover{color: #A3A3A3;}
+			.king3{height: 22.4px;line-height: 10.4px;}
+			.king3 img{float: left;}
+			.king4{height: 44.8px;line-height: 21.4px;}
+			.king4 img{float: left;margin-top: 3px;}
+			.king5{width: 256.033px;height: 160.567px;margin: 20px 0;}
+			.king6{width: 256.0333px;height: 112px;color: #616161;font-size: 14px;}
+			.king6 span{color: #616161;font-size: 14px;height: 22.4px;cursor: pointer;}
+			.king6 span:hover{color: #A3A3A3;}
+			.king7{height: 22.4px;}
+			.king8{height: 44.8px;line-height: 21.4px;}
+			.king9{width: 256.033px;height: 143.2px;margin: 20px 0;}
+			.king10{width: 256.033px;height: 119.4px;}
+			.dian{width: 1349px;height: 228.2px;}
+			.dian1{width: 349.667px;height: 148.2px;padding: 40px 50px;float: left;}
+			.dian2{width: 349.667px;height: 148.2px;}
+			.dian3{width: 50px;height: 50px;background: url(../img、/0C_J%253~C6TL@V6~3NZBSRL4.png);margin-right: 22px;float: left;}
+			.dian4{width: 277.667px;height: 148.2px;float: left;}
+			.dian5{height: 32px;}
+			.dian6{height: 105.6px;}
+			.dian31{width: 50px;height: 50px;background: url(../img、/A%7B4@5ICQQCT5A~1%25Z4J9KU9.png);margin-right: 22px;float: left;}
+			.dian32{width: 50px;height: 50px;background: url(../img、/$EZJ5ORIVLUGKO%6089LYOG3B.png);margin-right: 22px;float: left;}
+			.sing{width: 1349px;height: 53.9667px;}
+			.sing1{width: 1249px;height: 53.9667px;padding: 0 50px;}
+			.sing2{width: 1249px;height: 53.9667px;}
+			.sing2 p{height: 30.1667px;padding: 11.9px 0;font-size: 14px;line-height: 30px;}
+			.sing2 span{color: #999999;}
+			.sing2 a{cursor: pointer;font-size: 10px;color: #E60013;vertical-align: super;}
+			.fing{width: 1349px;height: 491px;background: url(../img、/beijinggongcheng.jpg)no-repeat center;background-size:100%;}
+			.qing{width: 1349px;height: 89px;position: fixed;z-index: 5;}
+			.qing1{width: 1295.03px;height: 88px;margin: 0 27px;}
+			.qing2{width: 548.017px;height: 88px;float: left;}
+			.qing7 p{width: 190px;height: 39px;font-size: 16px;line-height: 39px;text-align: left;color: #6B6B6B;font-weight: 500;padding-left: 18px;}
+			.qing7 p:hover{background: #F8F8F8;color: #222222;}
+			.fing1{width: 1249px;height: 403px;padding: 88px 50px 0 50px;}
+			.fing2{width: 1249px;height: 303px;padding: 50px 0;}
+			.qing3{width: 66px;height: 88px;float: left;line-height: 88px;font-size: 19px;color: #f66;font-weight: 600;cursor: pointer;text-align: center;}
+			.qing3:hover{color: #E5665E;}
+			.qing4{width: 42px;height: 70px;margin: 0 13px;border-bottom: 2px #FF6666 solid;}
+			.qing5{width: 86px;height: 88px;float: left;line-height: 88px;font-size: 19px;color: #f66;font-weight: 600;cursor: pointer;text-align: center;}
+			.qing6{width: 60px;height: 70px;margin: 0 13px;position: relative;}
+			.qing7{width: 42px;height: 70px;margin: 0 13px;position: relative;}
+			.qing7:hover{border-bottom: 2px #FF6666 solid;}
+			.qing3:hover .qing71{display: block;}
+			.fing3{width: 1249px;height: 201.5px;padding: 50.75px 0;}
+			.fing4{width: 1249px;height: 87.5px;}
+			.fing5{width: 73.6px;height: 106px;margin: 0 auto;}
+			.fing6{width: 1249px;height: 40px;}
+			.fing7{width: 1249px;height: 74px;}
+			.fing8{width: 719.417px;height: 74px;margin: 0 auto;}
+			.fing9{width: 719.417px;height: 54px;background:#F8F8F8;border-radius: 54px;padding-left: 54px;}
+			.six{width: 1349px;height: 451.617px;overflow: hidden;}
+			.six1{width: 769.4px;height: 371.617px;padding: 40px 20px;float: left;}
+			.six2{width: 499.6px;height: 411.617px;float: left;padding: 20px;}
+			.six3{width: 499.6px;height: 201.3px;margin-top: 105px;}
+			.six4{width: 484.6px;height: 54.5px;background: url(../img、/L_W%5D%25PKS~4Z09CN%60T3P4BM4.png);margin-left: 15px;}
+			.six5{width: 499.6px;height: 60.8px;margin-top: 50px;text-align: center;}
+			.six6{height: 20.8px;margin-top: 4.8px;font-size: 15px;}
+			.tang{width: 1349px;height: 141.5px;background: url(../img、/ssssssssssssssssssssss.png);}
+			.wing{width: 1349px;height: 339.2px;background: #F8F8F8;}
+			.wing1{width: 1249px;height: 339.2px;padding: 0 50px;}
+			.wing2{width: 1249px;height: 299.2px;padding: 20px 0;}
+			.wing3{width: 1249px;height: 299.2px;}
+			.wing4{width: 1249px;height: 35.2px;padding-bottom: 10px;}
+			.wing5{width: 1249px;height: 224px;margin-top: 30px;}
+			.wing6{width: 1249px;height: 224px;}
+			.wing7{width: 366.367px;height: 224.133px;float: left;position: relative;}
+			.wing71{width: 366.367px;height: 193.5px;float: left;position: absolute;background: #FBFFF8;opacity: 0;top: 0;transition: .6s;}
+			.wing71:hover{background: #F8F8F8;opacity: .7;}
+			.wing8{height: 24.6333px;cursor: pointer;}
+			.wing91{width: 366.367px;height: 224.133px;float: left;margin-left: 74.9333px;position: absolute;right: 491px;}
+			.wing92{width: 366.367px;height: 224.133px;float: left;margin-left: 74.9333px;position: absolute;right: 50px;}
+			.lianjiee{width: 1349px;height: 88px;position: relative;background: #F8F8F8;}
+			.ang{width: 50px;height: 50px;position: fixed;bottom: 140px;background: #A0A0A0;right: 40px;border-radius: 30px;cursor: pointer;z-index: 5;}
+			.ang:hover{background: #EB4A57;}
+			.dixia{width: 1349px;height: 59.6px;background: #F2F2F2;}
+			.dixia1{width: 1249px;height: 29.6px;padding: 15px 50px;}
+			.dixia2{width: 180px;height: 30px;float: right;margin-top: -10px;}
+			.dixia3{width: 30px;height: 30px;border-radius: 30px;background: url(../img、/%60L3Y8B%25~TJY1EK%5D9LH%5B04~7.png);float: left;}
+			.dixia3:hover{background: #46D4FE;}
+			.dixia4{width: 30px;height: 30px;border-radius: 30px;background: url(../img、/%25WRALWXHK2BDQXM477%5BRJOO.png);float: left;}
+			.dixia4:hover{background: #DC3023;}
+			.dixia5{width: 30px;height: 30px;border-radius: 30px;background: url(../img、/QYJM@F55IH8R%7D@%7D102@9CGP.png);float: left;}
+			.dixia5:hover{background: #007722;}
+			.dixia6{width: 30px;height: 30px;border-radius: 30px;background: url(../img、/J%25%5BGZBNNZY101OOHNYH8SNX.png);float: left;}
+			.dixia6:hover{background:#008CFA;}
+			.dixia7{width: 30px;height: 30px;border-radius: 30px;background: url(../img、/jdafhjhdaklhfkjsahfkahfkjahfkjdfkja.png);float: left;}
+			.dixia7:hover{background:#FF6666;}
+			.dixia8{width: 30px;height: 30px;border-radius: 30px;background: url(../img、/djgvkjabdvkjbadkvbkjdbvkadbvhjbdavhjabdv.png);float: left;}
+			.dixia8:hover{background: #FFA133;}
+			.wing72{width: 80px;height: 80px;margin: 56.75px auto;background: #EA4C53;}
+			.six11{width:769.4px;height: 371.617px;background: url(../img、/worldmappp.png)no-repeat;background-size: 101%;position: relative;}
+			.six12{width:769.4px;height: 371.617px;position: absolute;}
+			.six121{width:12px;height:12px;border-radius: 12px;position: absolute;background: #E00202;top: 21.1%;left: 28.3%;cursor: pointer;}
+			.six122{width:12px;height:12px;border-radius: 12px;position: absolute;background: #0099FF;top: 31.4%;left: 24.3%;cursor: pointer;}
+			.six123{width:12px;height:12px;border-radius: 12px;position: absolute;background: #00B07B;top: 248px;left: 270px;cursor: pointer;}
+			.six124{width:12px;height:12px;border-radius: 12px;position: absolute;background: #E00202;top:23.8%;left: 48.7%;cursor: pointer;}
+			.six125{width:12px;height:12px;border-radius: 12px;position: absolute;background: #004DB5;top: 28.6%;left: 49%;cursor: pointer;}
+			.six126{width:12px;height:12px;border-radius: 12px;position: absolute;background: #000000;top: 25.9%;left: 52%;cursor: pointer;}
+			.six127{width:12px;height:12px;border-radius: 12px;position: absolute;background: #004DB5;top: 20.4%;left: 57.7%;cursor: pointer;}
+			.six128{width:12px;height:12px;border-radius: 12px;position: absolute;background: #EACD76;top: 31.4%;left: 79%;cursor: pointer;}
+			.six129{width:12px;height:12px;border-radius: 12px;position: absolute;background:#9452E5;top:45.9%;left: 81.4%;cursor: pointer;}
+			.six1210{width:12px;height:12px;border-radius: 12px;position: absolute;background: #0099FF;top: 43.8%;left: 83.3%;cursor: pointer;}
+			.six1211{width:12px;height:12px;border-radius: 12px;position: absolute;background: #FF0202;top: 35.5%;left: 88%;cursor: pointer;}
+			.six1212{width:12px;height:12px;border-radius: 12px;position: absolute;background: #004DB5;top: 84.5%;left: 89.9%;cursor: pointer;}
+			.qing71{width: 208px;height: 80px;position: absolute;background: #FFFFFF;border-bottom: 1px #E60013 solid;border-radius: 0 0 5px 5px;z-index: -1;display: none;}
+			.qing8{width: 42px;height: 70px;margin: 0 13px;position: relative;}
+			.qing9{width: 60px;height: 70px;margin: 0 13px;}
+			.qing10{width: 42px;height: 70px;margin: 0 13px;position: relative;}
+			.qing11{width: 42px;height: 70px;margin: 0 13px;}
+			.qing81{width: 208px;height: 119px;position: absolute;background: #FFFFFF;border-bottom: 1px #E60013 solid;border-radius: 0 0 5px 5px; z-index: -1;display: none;}
+			.qing8:hover{border-bottom: 2px #FF6666 solid;}
+			.qing9:hover{border-bottom: 2px #FF6666 solid;}
+			.qing10:hover{border-bottom: 2px #FF6666 solid;}
+			.qing11:hover{border-bottom: 2px #FF6666 solid;}
+			.qing6:hover{border-bottom: 2px #FF6666 solid;}
+			.qing3:hover .qing81{display: block;}
+			.qing8 p{width: 190px;height: 39px;font-size: 16px;line-height: 39px;text-align: left;color: #6B6B6B;font-weight: 500;padding-left: 18px;}
+			.qing8 p:hover{background: #F8F8F8;color: #222222;}
+			.qing3:hover .qing111{display: block;}
+			.qing11 p{width: 190px;height: 39px;font-size: 16px;line-height: 39px;text-align: left;color: #6B6B6B;font-weight: 500;padding-left: 18px;}
+			.qing11 p:hover{background: #F8F8F8;color: #222222;}
+			.qing111{width: 208px;height: 119px;position: absolute;background: #FFFFFF;border-bottom: 1px #E60013 solid;border-radius: 0 0 5px 5px;z-index: -1;display: none;}
+			.qing61{width: 647.5px;height: 520px;position: absolute;background: #FFFFFF;border-bottom: 1px #E60013 solid;border-radius: 0 0 5px 5px; z-index: -1;left: -90px;display: none;}
+			.qing62{width: 587.5px;height: 216px;padding: 20px 30px 30px 30px;border-bottom: 1px #F8F8F8 solid;}
+			.qing63{width: 587.5px;height: 189px;padding: 30px 30px 30px 30px;border-bottom: 1px #E60013 solid;border-top: 1px #F8F8F8 dashed;margin-top: 1px;}
+			.qing621{width: 279.633px;height: 206px;padding: 10px 14px 0 0;float: left;position: relative;}
+			.qing622{width: 277.867px;height: 206px;padding: 10px 0px 0 15px;float: left;position: relative;}
+			.qing5:hover .qing61{ display: block;}
+			.qing6211{width: 279.633px;height: 187px;padding: 10px 14px 0 0;float: left;position: relative;}
+			.qing6222{width: 277.867px;height: 187px;padding: 10px 0px 0 15px;float: left;position: relative;}
+			.qing621 p:hover{background: #F8F8F8;}
+			.qing622 p:hover{background: #F8F8F8;} 
+			.qing6211 p:hover{background: #F8F8F8;}
+			.qing6222 p:hover{background: #F8F8F8;}
+			.fing111{width: 80px;height: 60px;position: relative;left: 578px;top: -36px;}
+
+			/* 第一个框悬挂的效果 */
+			.dier4 .dier6:hover ~ .dier7{ left: 608px; }
+			.dier4 .dier6:hover ~ .dier8{ left: 674px; }
+			.dier4 .dier6:hover ~ .dier9{ left: 740px; }
+			
+			.dier4 .dier7:hover ~ .dier8{ left: 674px; }
+			.dier4 .dier7:hover ~ .dier9{ left: 740px; }
+			.dier4 .dier7:hover{left: 134px;}
+			
+			
+			.dier4 .dier8:hover ~ .dier9{ left: 740px; }
+			.dier4 .dier8:hover{left: 134px;}
+			
+			.dier4 .dier9:hover{left: 202px;}
+			.sixyi{width: 226px;height: 63px;background: #FFFFFF;position: relative;z-index: 5;display: none;left: -110px;top: -105px;line-height: 26px;padding: 12px;}
+			.six121:hover .sixyi{display: block;}
+			.sixyi1{width: 298.667px;height: 87.75px;background: #FFFFFF;position: relative;z-index: 5;line-height: 26px;left: -356px;top: -48px;display: none;padding: 12px;}
+			.six122:hover .sixyi1{display: block;}
+			.sixyi2{width: 116px;height:62.25px;background: #FFFFFF;position: relative;z-index: 5;line-height: 32px;left: -70px;top: -102px;display: none;padding: 12px;}
+			.six123:hover .sixyi2{display: block;}
+			.sixyi3{width: 226px;height:104px;background: #FFFFFF;position: relative;z-index: 5;line-height: 26px;left: -128px;top: -144px;display: none;padding: 12px;}
+			.six124:hover .sixyi3{display: block;}
+			.sixyi4{width: 116px;height:62.25px;background: #FFFFFF;position: relative;z-index: 5;line-height: 32px;left: -156px;top: -42px;display: none;padding: 12px;}
+			.six125:hover .sixyi4{display: block;}
+			.sixyi5{width: 226px;height: 87px;background: #FFFFFF;position: relative;z-index: 5;display: none;left: 30px;top: -45px;line-height: 29px;padding: 12px;}
+			.six126:hover .sixyi5{display: block;}
+			.sixyi6{width: 226px;height: 62.25px;background: #FFFFFF;position: relative;z-index: 5;display: none;left: -114px;top: -105px;line-height: 29px;padding: 12px;}
+			.six127:hover .sixyi6{display: block;}
+			.sixyi7{width: 226px;height: 62.25px;background: #FFFFFF;position: relative;z-index: 5;display: none;left: -132px;top: -105px;line-height: 30px;padding: 12px;}
+			.six128:hover .sixyi7{display: block;}
+			.sixyi8{width: 226px;height: 136.5px;background: #FFFFFF;position: relative;z-index: 5;display: none;left: 34px;top: -80px;line-height: 26px;padding: 12px;}
+			.six1211:hover .sixyi8{display: block;}
+			.sixyi9{width: 116px;height: 87px;background: #FFFFFF;position: relative;z-index: 5;display: none;left: -156px;top: -48px;line-height: 30px;padding: 12px;}
+			.six129:hover .sixyi9{display: block;}
+			.sixyi10{width: 226px;height: 62.25px;background: #FFFFFF;position: relative;z-index: 5;display: none;left: -124px;top: 25px;line-height: 30px;padding: 12px;}
+			.six1210:hover .sixyi10{display: block;}
+			.sixyi11{width: 226px;height: 62.25px;background: #FFFFFF;position: relative;z-index: 5;display: none;left: -124px;top: -111px;line-height: 30px;padding: 12px;}
+			.six1212:hover .sixyi11{display: block;}
+			.six121q{width:12px;height:12px;background: #E00202;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			.six122q{width:12px;height:12px;background: #0099FF;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			.six123q{width:12px;height:12px;background: #00B07B;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			.six124q{width:12px;height:12px;background: #E00202;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			.six125q{width:12px;height:12px;background: #004DB5;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			.six126q{width:12px;height:12px;background: #000000;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			.six127q{width:12px;height:12px;background: #004DB5;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			.six128q{width:12px;height:12px;background: #EACD76;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			.six129q{width:12px;height:12px;background:#9452E5;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			.six1210q{width:12px;height:12px;background: #0099FF;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			.six1211q{width:12px;height:12px;background: #E00202;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			.six1212q{width:12px;height:12px;background: #004DB5;border-radius: 12px;
+					animation: 3s sijie infinite;
+			}
+			@keyframes sijie{
+				from{transform: scale(1);
+					opacity: 1;
+				}
+				to{transform: scale(3);
+					opacity: 0;
+				}
+			}
+			.finging{width: 27px;height: 46px;border: 2px #FFFFFF solid;position: absolute;left: 32%;border-radius: 27px;
+				animation: 2s aisijie infinite;
+			}
+			@keyframes aisijie{
+				from{top: 0;
+					opacity: 1;
+				}
+				to{top: 14px;
+					opacity: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ang">
+		</div>
+		<div class="qing">
+			<div class="qing1">
+				<div class="qing2">
+					<div class="qing3">
+						<div class="qing4">
+							首页
+						</div>
+					</div>
+					<div class="qing5">
+						<div class="qing6">
+							资源集
+							<div class="qing61">
+								<div class="qing62">
+									<div class="qing621">
+										<span style="margin-bottom: 8px;font-size: 18px;color: #222222;position: absolute;height: 24px;left: 0;top: 10px;line-height: 20px;width: 279.633px;text-align: left;">传统分部</span>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;margin-top: 30px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 3px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">经部</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">史部</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">子部</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;position: relative;left: 14px;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">类部</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">集部</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">丛书部</p>
+									</div>
+									<div class="qing622">
+										<span style="margin-bottom: 8px;font-size: 18px;color: #222222;position: absolute;height: 24px;left:16px;top: 10px;line-height: 20px;width: 279.633px;text-align: left;">特殊类别</span>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;margin-top: 30px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 3px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">绘画</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">法书</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">稿钞本</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">碑帖</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">舆图</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">影像</p>
+									</div>
+									
+								</div>
+								<div class="qing63">
+									<div class="qing6211">
+										<span style="margin-bottom: 8px;font-size: 18px;color: #222222;position: absolute;height: 24px;left: 0;top: 10px;line-height: 20px;width: 279.633px;text-align: left;">现代分类</span>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;margin-top: 30px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 3px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">总类</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">哲学类</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">宗教玄学类</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">科学类</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">应用科学类</p>
+									</div>
+									<div class="qing6222">
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">社会科学类</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">史地类</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;position: relative;left: 14px;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">世界史地</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;position: relative;left: 14px;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">语言文学类</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">语言文学类</p>
+										<p style="width: 249.633px;height: 23px;padding: 3px 12px 3px 18px;color: #6b6b6b;font-size: 16px;line-height: 20px;text-align: left;font-weight: 400;"><img style="margin-left: -17px;margin-right: 5px;top: 4px;position: relative;" src="../img、/E%5B)@3S8VW2%60ZPBFE1(10KAG.png">艺术类</p>
+									</div>
+									<div style="clear: both;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="qing3">
+						<div class="qing7">
+							服务
+							<div class="qing71">
+								<p>文件同步</p>
+								<p style="border-bottom: #E60013 1px solid;">学术导航</p>
+							</div>
+						</div>
+					</div>
+					<div class="qing3">
+						<div class="qing8">
+							资询
+							<div class="qing81">
+								<p>书格动态</p>
+								<p>学术动态</p>
+								<p style="border-bottom: #E60013 1px solid;">展览动态</p>
+							</div>
+						</div>
+					</div>
+					<div class="qing5">
+						<div class="qing9">
+							交流区
+						</div>
+					</div>
+					<div class="qing3">
+						<div class="qing10">
+							捐赠
+						</div>
+					</div>
+					<div class="qing3">
+						<div class="qing11">
+							关于
+							<div class="qing111">
+								<p>书格动态</p>
+								<p>学术动态</p>
+								<p style="border-bottom: #E60013 1px solid;">展览动态</p>
+							</div>
+						</div>
+					</div> 
+				</div>
+				<img style="width: 191.783px;position: relative;left: 554px;" src="../imges/logo.png" >
+			</div>
+		</div>
+		<div class="fing">
+			<div class="fing1">
+				<div class="fing2">
+					<div class="fing3">
+						<div class="fing4">
+							<div class="fing5"></div>
+						</div>
+						<div class="fing6"></div>
+						<div class="fing7">
+							<div class="fing8">
+								<div class="fing9">
+									<input style="width: 634.417px;height: 50px;border: 0;background:#F8F8F8;font-size: 19px;"placeholder="搜索资源集" >
+									<button style="width: 108px;height: 50px;margin-left: -30px;border-radius: 30px;margin-top: 2px;border: 0;background: #E60013;color: #F8F8F8;font-size: 19px;">搜索</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fing111">
+						<div class="finging"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sing">
+			<div class="sing1">
+				<div class="sing2">
+					<p>
+						<span>^背景图为北京宫城图轴局部</span><a>【1】</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="dian">
+			<div class="dian1">
+				<div class="dian2">
+					<div class="dian3"></div>
+					<div class="dian4">
+						<div class="dian5">
+							<h3 style="color: #222222;font-size: 20px;font-weight: 500;padding-top: 2px;">完全开放</h3>
+						</div>
+						<div class="dian6">
+							<p style="margin-top: 13.6px;color: #111111;line-height: 26px;">
+								<span style="color: #E80013;">书格</span>是一个自由开放的在线古籍图书馆。致力于开放式分享、介绍、推荐有价值的古籍善本，并鼓励将文化艺术作品数字化归档。
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="dian1">
+				<div class="dian2">
+					<div class="dian31"></div>
+					<div class="dian4">
+						<div class="dian5">
+							<h3 style="color: #222222;font-size: 20px;font-weight: 500;padding-top: 2px;">完全开放</h3>
+						</div>
+						<div class="dian6">
+							<p style="margin-top: 13.6px;color: #111111;line-height: 26px;">
+								我们尽量挑选欣赏和在阅读价值较高的善本，所以我们更倾向于：艺术类、影像类、珍稀类以及部分刊印水平较高的书籍。
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+			<div class="dian1">
+				<div class="dian2">
+					<div class="dian32"></div>
+					<div class="dian4">
+						<div class="dian5">
+							<h3 style="color: #222222;font-size: 20px;font-weight: 500;padding-top: 2px;">完全开放</h3>
+						</div>
+						<div class="dian6">
+							<p style="margin-top: 13.6px;color: #111111;line-height: 26px;">
+								我们尽可能呈现书籍品貌、内容。借此计划让大家自由、免费地欣赏到那些难以现世的书籍。希望大家能从中感受到人类文明进程。
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="diyi">
+			<div class="diyi1">
+				<div class="diyi2">
+					<div class="diyi3">
+						<img style="width: 439px;height: 54px;" src="../img、/51H1L1(W8~K_DUNX4A$4QDN.png" >
+					</div>
+					<div class="diyi4">
+						<h3 style="line-height: 1.85em;text-align: center;font-size: 24px;font-weight: 100;">最新资源集</h3>
+						<p style="height: 19.5px;width: 439.6px;color: #666666;font-size: 15px;text-align: center;">新版已发布203套资源，你可以浏览所有资源或热门访问的资源</p>
+					</div>
+					<div class="diyi5">
+						<a style="text-decoration: none;" href="#">
+							<div class="diyi6">
+								所以资源
+							</div>
+						</a>
+						<a style="text-decoration: none;" href="#">
+							<div class="diyi7">
+								旧版资源
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="dier">
+				<img style="width: 404.683px;height: 207.883px;" src="../img、/er_ya_guo_zhu24-1000x510.jpg" >
+				<div class="dier2">
+					<h3>尔雅</h3>
+				</div>
+			</div>
+			
+			<div class="dier1">
+				<img style="width: 404.683px;height: 207.883px;" src="../imges/dd6.jpg" >
+				<div class="dier3">
+					<h3>群经音辨</h3>
+				</div>
+			</div>
+			<div class="dier4">
+				<div class="dier6">
+					<img style="width: 807px;" src="../img、/liao_zhai_quan_tu01-845x321.jpg" >
+					<div class="dier5">
+						聊斋全图
+					</div>
+				</div>
+				<div class="dier7">
+					<img style="width: 807px;" src="../imges/dd1.jpg" >
+					<div class="dier5">
+						中国的建筑和宗教文化
+					</div>
+				</div>
+				<div class="dier8">
+					<img style="width: 807px;" src="../imges/dd2.jpg" >
+					<div class="dier5">
+						图注八十一难经
+					</div>
+				</div>
+				<div class="dier9">
+					<img style="width: 807px;" src="../imges/dd3.jpg" >
+					<div class="dier5">
+						武经射学正宗
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+		<div class="disan">
+			<div class="disan1">
+				<div class="disan2">
+					<div class="disan3">
+						<img src="../img、/%60((UXZ4%5D2262%5DO_G)K4RGX5.png">
+					</div>
+					<div class="disan4">
+						随机资源集
+					</div>
+					<div class="disan5">
+						<a style="text-decoration: none;" href="#">
+							<div class="disan6">
+								热门资源
+							</div>
+						</a>
+						<a style="text-decoration: none;" href="#">
+							<div class="disan7">
+								已整理未发布的资源
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="disan8">
+				<div class="ding1">
+					<img style="width: 205.333px;" src="../img、/wu_jing_lei_yu01-1000x510.jpg" >
+					<div class="ding2"><h3>五经类语</h3></div>
+				</div>
+				<div class="ding1">
+					<img style="width: 205.333px;" src="../img、/afong_bei_jing_she_ying_ji01-1000x510.jpg" >
+					<div class="ding2"><h3>古文约选</h3></div>
+				</div>
+				<div class="ding1">
+					<img style="width: 205.333px;" src="../img、/chang_hen_ge_tu_juan00-1000x510.jpg" >
+					<div class="ding2"><h3>图注八十一难经</h3></div>
+				</div>
+				<div class="ding3">
+					<img style="width: 205.333px;" src="../img、/changan_zhi01-845x431.jpg" >
+					<div class="ding2"><h3>金薤琳琅</h3></div>
+				</div>
+				<div class="ding1">
+					<img style="width: 205.333px;" src="../img、/die_baukunst_und_religiose_kultur_der_chinesen35-845x321.jpg" >
+					<div class="ding2"><h3>今古舆地图</h3></div>
+				</div>
+				<div class="ding1">
+					<img style="width: 205.333px;" src="../img、/er_ya_guo_zhu24-1000x510.jpg" >
+					<div class="ding2"><h3>兵钤</h3></div>
+				</div>
+				<div class="ding1">
+					<img style="width: 205.333px;" src="../img、/gu_wen_yue_xuan01-845x431.jpg" >
+					<div class="ding2"><h3>开卷一笑</h3></div>
+				</div>
+				<div class="ding3">
+					<img style="width: 205.333px;" src="../img、/shu_wu_lei_zuan_tu_yi28-1000x510.jpg" >
+					<div class="ding2"><h3>开卷一笑</h3></div>
+				</div>
+			</div>
+		</div>
+		<div class="six">
+			<div class="six1">
+				<div class="six11">
+					<div class="six12">
+						<div class="six121">
+							<div class="six121q"></div>
+							<div class="sixyi">
+								<p style="font-size: 15px;color: #FF6666;">加拿大</p>
+								<span style="font-size: 15px;">多伦多大学郑裕彤东亚图书馆、阿尔伯塔大学博物馆</span>
+							</div>
+						</div>
+						<div class="six122">
+							<div class="six122q"></div>
+							<div class="sixyi1">
+								<p style="font-size: 15px;color: #FF6666;">美国</p>
+								<span style="font-size: 15px;">哈佛大学图书馆、美国国会图书馆、互联网档案馆、普林斯顿大学图书馆、大都会博物馆、克利夫兰艺术博物馆、弗瑞尔·赛克勒美术馆等等</span>
+							</div>
+						</div>
+						<div class="six123">
+							<div class="six123q"></div>
+							<div class="sixyi2">
+								<p style="font-size: 15px;color: #FF6666;">巴西</p>
+								<span style="font-size: 15px;">巴西国家图书馆</span>
+							</div>
+						</div>
+						<div class="six124">
+							<div class="six124q"></div>
+							<div class="sixyi3">
+								<p style="font-size: 15px;color: #FF6666;">英国</p>
+								<span style="font-size: 15px;">大英图书馆、剑桥大学图书馆、博德利图书馆、Chester Beatty 博物馆</span>
+							</div>
+						</div>
+						<div class="six125">
+							<div class="six125q"></div>
+							<div class="sixyi4">
+								<p style="font-size: 15px;color: #FF6666;">法国</p>
+								<span style="font-size: 15px;">法国国家图书馆</span>
+							</div>
+						</div>
+						<div class="six126">
+							<div class="six126q"></div>
+							<div class="sixyi5">
+								<p style="font-size: 15px;color: #FF6666;">德国</p>
+								<span style="font-size: 15px;">德国柏林国立图书馆、巴伐利亚州立东亚图书馆</span>
+							</div>
+						</div>
+						<div class="six127">
+							<div class="six127q"></div>
+							<div class="sixyi6">
+								<p style="font-size: 15px;color: #FF6666;">俄罗斯</p>
+								<span style="font-size: 15px;">圣彼得堡国立大学</span>
+							</div>
+						</div>
+						<div class="six128">
+							<div class="six128q"></div>
+							<div class="sixyi7">
+								<p style="font-size: 15px;color: #FF6666;">中国</p>
+								<span style="font-size: 15px;">北京故宫博物院、中国国家图书馆</span>
+							</div>
+						</div>
+						<div class="six129">
+							<div class="six129q"></div>
+							<div class="sixyi9">
+								<p style="font-size: 15px;color: #FF6666;">香港（中国）</p>
+								<span style="font-size: 15px;">香港中文大学图书馆</span>
+							</div>
+						</div>
+						<div class="six1210">
+							<div class="six1210q"></div>
+							<div class="sixyi10">
+								<p style="font-size: 15px;color: #FF6666;">台湾（中国）</p>
+								<span style="font-size: 15px;">台湾故宫博物馆，台北国家图书馆</span>
+							</div>
+						</div>
+						<div class="six1211">
+							<div class="six1211q"></div>
+							<div class="sixyi8">
+								<p style="font-size: 15px;color: #FF6666;">日本</p>
+								<span style="font-size: 15px;">内阁文库、国立国会图书馆、早稻田大学图书馆、京都大学图书馆、宫内厅书陵部、关西大学图书馆、东京博物馆等等</span>
+							</div>
+						</div>
+						<div class="six1212">
+							<div class="six1212q"></div>
+							<div class="sixyi11">
+								<p style="font-size: 15px;color: #FF6666;">澳大利亚</p>
+								<span style="font-size: 15px;">澳大利亚国家图书馆</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="six2">
+				<div class="six3">
+					<div class="six4"></div>
+					<div class="six5">
+						<h3 style="font-size: 30px;font-weight: normal;color: #222222;">感谢开放的互联网</h3>
+						<div class="six6">
+							每个人都能自由地看到我们的文明
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+		<div class="tang">
+			
+		</div>
+		<div class="wing">
+			<div class="wing1">
+				<div class="wing2">
+					<div class="wing3">
+						<div class="wing4">
+							<h3 style="font-size: 28px;color: #222222;">最新资讯</h3>
+						</div>
+						<div class="wing5">
+							<div class="wing6">
+								<div class="wing7">
+									<img style="width: 366.367px;cursor: pointer;" src="https://new.shuge.org/wp-content/uploads/2020/05/qizhounian-710x375.jpg" >
+									<div class="wing8">
+										<h3 style="font-size: 16px;">七周年，期乎千里</h3>
+									</div>
+									<div class="wing71">
+										<div class="wing72"></div>
+									</div>
+								</div>
+								<div class="wing91">
+									<img style="width: 366.367px;cursor: pointer;" src="https://new.shuge.org/wp-content/uploads/2020/04/beifeng-710x375.jpg" >
+									<div class="wing8">
+										<h3 style="font-size: 16px;">停止支持百度网盘下载节点</h3>
+									</div>
+									<div class="wing71">
+										<div class="wing72"></div>
+									</div>
+								</div>
+								<div class="wing92">
+									<img style="width: 366.367px;cursor: pointer;" src="https://new.shuge.org/wp-content/uploads/2019/09/guobaojiguang001-710x375.jpg" >
+									<div class="wing8">
+										<h3 style="font-size: 16px;">中华传统文化典籍保护传承大展（一）</h3>
+									</div>
+									<div class="wing71">
+										<div class="wing72"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lianjiee">
+			<img style="position: absolute;right: 76px;" src="../img、/xunma.png" >
+		</div>
+		<div class="lianjie">
+			<div class="lianjie1">
+				<div class="lianjie2">
+					<div class="lianjie3">
+						<h3 class="hing1">书格资源</h3>
+						<div class="lianjie4">
+							<p>书格旧版资源</p>
+							<p>已整理未发布的资源</p>
+							<p>文件同步</p>
+							<p>文件目录</p>
+						</div>
+					</div>
+					<div class="lianjie5">
+						<h3 class="hing1">新更资源集</h3>
+						<div class="lianjie6">
+							<img style="width: 30px;border: 2px #E8E8E8 solid;margin: 4px 9px 0 0 ;float: left;" src="../img、/er_ya_guo_zhu24-36x36.jpg" >
+							<div class="lianjie7">
+								尔雅
+								<p>2020年09月25日</p>
+							</div>
+						</div>
+						<div class="lianjie6">
+							<img style="width: 30px;border: 2px #E8E8E8 solid;margin: 4px 9px 0 0 ;float: left;" src="../img、/qun_jing_yin_bian01-36x36.jpg" >
+							<div class="lianjie7">
+								群经音辨
+								<p>2020年09月22日</p>
+							</div>
+						</div>
+						<div class="lianjie6">
+							<img style="width: 30px;border: 2px #E8E8E8 solid;margin: 4px 9px 0 0 ;float: left;" src="../img、/zhou_peichun_min_su_hua0-36x36.jpg" >
+							<div class="lianjie7">
+								周培春民俗画系列
+								<p>2019年11月24日</p>
+							</div>
+						</div>
+						<div class="lianjie6">
+							<img style="width: 30px;border: 2px #E8E8E8 solid;margin: 4px 9px 0 0 ;float: left;" src="../img、/kai_juan_yi_xiao01-36x36.jpg" >
+							<div class="lianjie7">
+								开卷一笑
+								<p>2019年01月02日</p>
+							</div>
+						</div>
+						<div class="lianjie6">
+							<img style="width: 30px;border: 2px #E8E8E8 solid;margin: 4px 9px 0 0 ;float: left;" src="../img、/ylddzt-36x36.jpg" >
+							<div class="lianjie7">
+								永乐大典
+								<p>2020年06月01日</p>
+							</div>
+						</div>
+						<div class="lianjie6">
+							<img style="width: 30px;border: 2px #E8E8E8 solid;margin: 4px 9px 0 0 ;float: left;" src="../img、/liao_zhai_gu_shi_hua_ce01-36x36.jpg" >
+							<div class="lianjie7">
+								聊斋故事画册
+								<p>2020年03月28日</p>
+							</div>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				<div class="ning">
+					<div class="ning1">
+						<div class="ning2">
+							<div class="ning3">
+								评论
+							</div>
+							<div class="ning4">
+								最新
+							</div>
+							<div class="ning5">
+								热门资讯
+							</div>
+						</div>
+						<div class="ning6">
+							抱歉，暂时没写提取工具
+							<p>2020年09月28日 - 09:15 撰自 未曾</p>
+						</div>
+						<div class="ning7">
+							老师好，慶應義塾大学图书馆有没有获取批量URL链接的工具
+							<p>2020年09月28日 - 08:13</p>
+						</div>
+						<div class="ning6">
+							我们没有APP哦。
+							<p>2020年09月26日 - 21:56 撰自 未曾</p>
+						</div>
+						<div class="ning6">
+							书格APP怎么下载国内怎么没有
+							<p>2020年09月26日 - 21:50</p>
+						</div>
+						<div class="ning6">
+							 感谢先生分享此宝贵鉴定意见。我...
+							<p>2020年09月26日 - 19:46 撰自 未曾</p>
+						</div>
+						<div class="ning6">
+							未曾先生，这个本子应该不是顾校本...
+							<p>2020年09月26日 - 17:59 撰自 風雨竹</p>
+						</div>
+						<div class="ning6">
+							竟……暗含春宫，不知有没其他类似题...
+							<p>2020年09月26日 - 16:55</p>
+						</div>
+						<div class="ning6">
+							原书缺
+							<p>2020年09月25日 - 23:29 撰自 未曾</p>
+						</div>
+					</div>
+				</div>
+				<div class="ting">
+					<div class="ting1">
+						<h3 class="hing1">图书馆推荐</h3>
+						<div class="ting11">
+							<p>世界数字图书馆</p>
+							<p>互联网档案馆</p>
+							<p>日本内阁文库</p>
+							<p>日本国立国会图书馆</p>
+							<p>美国国会图书馆</p>
+							<p>宫内厅书陵部</p>
+							<p>哈佛大学图书馆</p>
+							<p>法国国家图书馆</p>
+							<p>德国柏林国立图书馆</p>
+							<p>香港中文大学图书馆</p>
+							<p>早稻田大学图书馆</p>
+							<p>京都大学图书馆</p>
+							<p>国文学研究资料馆</p>
+							<p>普林斯顿大学东亚图书馆</p>
+							<p>关西大学图书馆</p>
+							<p>不列颠哥伦比亚大学图书馆</p>
+							<p>奎章阁-古典文献资源导航</p>
+						</div>
+					</div>
+					<div class="ting2">
+						<h3 class="hing1">博物馆推荐</h3>
+						<div class="ting11">
+							<p>北京故宫博物院</p>
+							<p>台北故宫博物院</p>
+							<p>大都会博物馆</p>
+							<p>克利夫兰艺术博物馆</p>
+							<p>弗瑞尔·赛克勒美术馆</p>
+							<p>e 国宝</p>
+						</div>
+					</div>
+				</div>
+				<div class="king">
+					<div class="king1">
+						<h3 class="hing1">近期回复</h3>
+						<div class="king2">
+							<div class="king3">
+								<img src="../img、/689d395c4e0a9d96ba8eccb388a3b7f0.jpeg" >
+								未曾 在 <span>求《地元真决》全书</span>2分 前
+							</div>
+							<div class="king3">
+								<img src="../img、/6c42d46e595097e1fdd91e261b6e2655.png" >
+								崇荫范绮 在<span> 求姑妄言。</span>25分 前
+							</div>
+							<div class="king4">
+								<img src="../img、/689d395c4e0a9d96ba8eccb388a3b7f0.jpeg" >
+								未曾 在 <span>求 沈垚《落帆楼文集》民国吴兴刘承幹嘉业堂刊本</span>3小时， 47分 前
+							</div>
+							<div class="king4">
+								<img src="../img、/689d395c4e0a9d96ba8eccb388a3b7f0.jpeg" >
+								未曾 在 <span>已整理但未发布到网站的资源</span>4小时， 45分 前
+							</div>
+						</div>
+						<div class="king5">
+							<h3 class="hing1">近期话题</h3>
+							<div class="king6">
+								<div class="king7">
+									<span>求《地元真决》全书</span> 由
+									<img src="../img、/62647b1abe3d905240e7fcee0bac4f02.png" >守阳
+								</div>
+								<div class="king8">
+									<span>求 沈垚《落帆楼文集》民国吴兴刘承幹嘉业堂刊本</span> 由 
+									<img src="../img、/d7e0dc201633dc53d39a791cd51420fc.png" >晚霁
+								</div>
+								<div class="king7">
+									<span>求宫内厅藏宋明州刻本文选</span> 由
+									<img src="../img、/3e9d2fb87ef670d94efab60f6fd8de16.png" >夜郎
+								</div>
+								<div class="king7">
+									<span>求《费县志》</span> 由
+									<img src="../img、/d69db97f28335611558c68903c04aa55.png" >书生不逍遥
+								</div>
+							</div>
+						</div>
+						<div class="king9">
+							<div class="king10">
+								<p style="color: #616161;margin-bottom: 2px;">每个人都能自由地看到我们的文明</p>
+								<span style="font-size: 14px;color: #5E5E5E;line-height: 29px;"> 书格致力于开放式分享、介绍公共版权领域的古籍善本数字资源</span>
+								<div style="clear: both;"></div>
+								<img style="width: 40px;" src="../img、/cc4.png" >
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dixia">
+			<div class="dixia1">
+				<span style="font-size: 11px;color: #777777;float: left;">
+					2013-2020 © 
+					<a style="text-decoration: none;color: #222222;" href="#">书格</a> 
+					- Based on 
+					<a style="text-decoration: none;color: #222222;" href="#">Wordpress</a> 
+					& 
+					<a style="text-decoration: none;color: #222222;" href="#">Artview, By weiceng.</a> 
+					<a style="text-decoration: none;color: #222222;" href="#">京ICP-15028230-3</a>
+				</span>
+				<div class="dixia2">
+					<div class="dixia3"></div>
+					<div class="dixia4"></div>
+					<div class="dixia5"></div>
+					<div class="dixia6"></div>
+					<div class="dixia7"></div>
+					<div class="dixia8"></div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+	</body>
+</html>
